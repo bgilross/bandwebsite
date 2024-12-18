@@ -24,6 +24,9 @@ export default {
 			animation: {
 				fadeIn: "fadeIn 2s ease-in",
 			},
+			boxShadow: {
+				"3xl": "0 15px 30px -5px rgba(0, 0, 0, 0.5)",
+			},
 		},
 	},
 	plugins: [],

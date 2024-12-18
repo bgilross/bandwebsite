@@ -23,13 +23,28 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/paperBG.png")]`}
 			>
-				<div className="h-12 w-1/2 sticky top-5 left-[26%] rounded-3xl bg-black opacity-60 flex">
-					<Image
-						src="/facebook-cropped.png"
-						alt="facebook"
-						width={50}
-						height={10}
-					/>
+				<div className="h-14 w-1/2 p-2 sticky top-5 z-50 left-1/2 -translate-x-1/2 rounded-3xl bg-black bg-opacity-60 flex justify-between items-center">
+					<div className="flex gap-3 ml-3">
+						<Image
+							src="/facebook-cropped.png"
+							alt="facebook"
+							width={40}
+							height={5}
+							className="rounded-full"
+						/>
+						<Image
+							src="/instagram-cropped.png"
+							alt="instagram"
+							width={40}
+							height={5}
+							className="rounded-full"
+						/>
+					</div>
+					<div className="flex text-white gap-4 mr-3">
+						<div>HOME</div>
+						<div>PICS</div>
+						<div>CONTACT</div>
+					</div>
 				</div>
 				{children}
 			</body>
