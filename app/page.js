@@ -16,10 +16,10 @@ export default function Home() {
         {/* <div className='w-2/3 flex bg-black bg-opacity-50 p-8 px-12 rounded-full overflow-hidden gap-4'> */}
         <Image
           className='rounded-3xl shadow-3xl mix-blend-luminosity'
-          src='/bandphoto3.png'
+          src='/bandphoto2.png'
           alt='band'
-          width={600}
-          height={500}
+          width={700}
+          height={600}
         />
         {/* <Image
           className='rounded-3xl shadow-3xl'
