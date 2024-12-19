@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/paperBG.png")]`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/bigpaperBG.png")]`}
 			>
 				<div className="h-14 w-1/2 p-2 sticky top-5 z-50 left-1/2 -translate-x-1/2 rounded-3xl bg-black bg-opacity-60 flex justify-between items-center">
 					<div className="flex gap-3 ml-3">
