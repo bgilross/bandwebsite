@@ -34,7 +34,7 @@ export default function FixedCarousel() {
 									? "z-10 scale-105 opacity-100"
 									: isLeft || isRight
 									? "z-5 scale-95 opacity-80"
-									: "hidden"
+									: "animate-fadeOut opacity-0"
 							}`}
 							style={{
 								left: isActive ? "50%" : isLeft ? "15%" : isRight ? "85%" : "0",

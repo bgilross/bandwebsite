@@ -58,51 +58,63 @@ export default function Home() {
 
 			{/* CONTACT */}
 			<div className="min-h-screen w-full flex justify-center items-center">
-				<form className="flex flex-col justify-center items-center gap-1 w-full max-w-[600px] rounded-lg h-full min-h-[500px]">
-					<div className="pb-8">
-						<p className="text-4xl font-bold inline border-b-4 text-black">
+				<div className="w-[500px] h-[500px] flex flex-col justify-center items-center bg-[url('/contact1.png')] bg-cover mix-blend-luminosity py-8">
+					<div className="w-full h-full flex flex-col justify-center items-center p-4 px-12 gap-3">
+						<label className="flex items-center gap-3 font-bold text-lg">
+							Name:
+							<input
+								className="input-style"
+								id="name"
+								type="text"
+								placeholder="Name"
+							/>
+						</label>
+						<label className="flex gap-4 font-bold items-center text-lg">
+							Email:
+							<input
+								className="input-style"
+								id="email"
+								type="email"
+								placeholder="Email"
+							/>
+						</label>
+						<label className="flex items-center font-bold text-lg">
+							Subject:
+							<input
+								className="input-style"
+								id="subject"
+								type="text"
+								placeholder="Subject"
+							/>
+						</label>
+						<label className="flex items-center font-bold gap-5 text-lg">
+							Body:
+							<textarea
+								className="input-style"
+								id="text"
+								placeholder="Body"
+							/>
+						</label>
+					</div>
+					<div className="w-full flex justify-center text-white">
+						<input
+							className="text-white bg-black w-28 h-10 rounded-lg cursor-pointer"
+							id="submit"
+							type="submit"
+						/>
+					</div>
+				</div>
+				{/* <form className="flex flex-col justify-center gap-1 bg-white mix-blend-darken shadow-xl rounded-lg h-full min-h-[500px]">
+					<div className="text-left pb-8 px-11">
+						<p className="text-4xl font-bold inline border-b-4 border-blue-700 text-black">
 							Contact
 						</p>
-						<p className="text-yellow-300 text-xl py-4">
+						<p className="text-black font-bold text-xl">
 							Submit the form below to shoot us an email!
 						</p>
 					</div>
-					<label className="mr-1">
-						Name:
-						<input
-							className="input-style"
-							id="name"
-							type="text"
-							placeholder="Name"
-						/>
-					</label>
-					<label>
-						Email:
-						<input
-							className="input-style"
-							id="email"
-							type="email"
-							placeholder="Email"
-						/>
-					</label>
-					<label className="mr-4">
-						Subject:
-						<input
-							className="input-style"
-							id="subject"
-							type="text"
-							placeholder="Subject"
-						/>
-					</label>
-					<label className="flex ml-2">
-						Body:
-						<textarea
-							className="input-style"
-							id="text"
-							placeholder="Body"
-						/>
-					</label>
-				</form>
+					
+				</form> */}
 			</div>
 		</div>
 	)
