@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
 const images = [
@@ -12,9 +12,13 @@ const images = [
 export default function FixedCarousel() {
 	const [current, setCurrent] = useState(0)
 
-	const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length)
-	const prevSlide = () =>
-		setCurrent((prev) => (prev - 1 + images.length) % images.length)
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setCurrent((prev) => (prev + 1) % images.length)
+		}, 5000)
+
+		return () => clearInterval(timer)
+	}, [])
 
 	return (
 		<div className="relative w-full flex flex-col items-center">
@@ -54,22 +58,6 @@ export default function FixedCarousel() {
 						</div>
 					)
 				})}
-			</div>
-
-			{/* Controls */}
-			<div className="flex justify-center gap-4 mt-4">
-				<button
-					onClick={prevSlide}
-					className="bg-black text-white px-4 py-2 rounded-lg"
-				>
-					Previous
-				</button>
-				<button
-					onClick={nextSlide}
-					className="bg-black text-white px-4 py-2 rounded-lg"
-				>
-					Next
-				</button>
 			</div>
 		</div>
 	)
