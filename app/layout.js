@@ -21,29 +21,84 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/paperBG.png")]`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url("/bigpaperBG_1.png")]`}
 			>
-				<div className="h-14 w-1/2 p-2 sticky top-5 z-50 left-1/2 -translate-x-1/2 rounded-3xl bg-black bg-opacity-60 flex justify-between items-center">
-					<div className="flex gap-3 ml-3">
-						<Image
-							src="/facebook-cropped.png"
-							alt="facebook"
-							width={40}
-							height={5}
-							className="rounded-full"
-						/>
-						<Image
-							src="/instagram-cropped.png"
-							alt="instagram"
-							width={40}
-							height={5}
-							className="rounded-full"
-						/>
-					</div>
-					<div className="flex text-white gap-4 mr-3">
+				<div className="h-14 w-1/2 p-2 sticky top-5 z-50 left-1/2 -translate-x-1/2 rounded-3xl  flex justify-center items-center">
+					{/* <div className="flex text-white gap-4 ml-3">
 						<div>HOME</div>
 						<div>PICS</div>
 						<div>CONTACT</div>
+					</div> */}
+					<div className="flex gap-3 mr-3">
+						<a
+							href="https://www.facebook.com/profile.php?id=61560936724097"
+							target="_blank"
+						>
+							<Image
+								src="/facebook-cropped.png"
+								alt="facebook"
+								width={40}
+								height={5}
+								className="social"
+							/>
+						</a>
+
+						<a
+							href="https://www.instagram.com/thefreighthoppersunion/"
+							target="_blank"
+						>
+							<Image
+								src="/instagram-cropped.png"
+								alt="instagram"
+								width={40}
+								height={5}
+								className="social"
+							/>
+						</a>
+						<a
+							href="https://bsky.app/profile/freight-hoppers.bsky.social"
+							target="_blank"
+						>
+							<Image
+								src="/bluesky.png"
+								alt="bluesky"
+								width={40}
+								height={5}
+								className="social"
+							/>
+						</a>
+						{/* <Image
+							src="/snapchat.png"
+							alt="snapchat"
+							width={40}
+							height={5}
+							className="social"
+						/> */}
+						<a
+							href="https://www.reddit.com/u/FreightHoppers-Union/s/iGS0OXrPnp"
+							target="_blank"
+						>
+							<Image
+								src="/reddit.png"
+								alt="reddit"
+								width={40}
+								height={5}
+								className="social"
+							/>
+						</a>
+						<a
+							href="https://www.youtube.com/channel/UCMI8aRhtIn68d2zqwQkdrlA"
+							target="_blank"
+							className="no-underline"
+						>
+							<Image
+								src="/youtube-cropped.png"
+								alt="youtube"
+								width={40}
+								height={5}
+								className="social"
+							/>
+						</a>
 					</div>
 				</div>
 				{children}

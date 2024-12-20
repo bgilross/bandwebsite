@@ -1,49 +1,69 @@
-import Image from "next/image";
+"use client"
+
+import Image from "next/image"
+import ImageCarousel from "../components/ImageCarousel"
+import { Sancreek } from "next/font/google"
+import Contact from "../components/Contact"
+
+const sancreek = Sancreek({
+	subsets: ["latin"],
+	weight: "400",
+})
 
 export default function Home() {
-  return (
-    <div className='h-auto w-full'>
-      <div className='min-h-screen w-full flex justify-center items-center'>
-        <Image
-          className='animate-fadeIn mb-10 mix-blend-overlay'
-          src='/logoBG.png'
-          alt='logo'
-          width={900}
-          height={700}
-        />
-      </div>
-      <div className='min-h-screen w-full flex justify-center items-center'>
-        {/* <div className='w-2/3 flex bg-black bg-opacity-50 p-8 px-12 rounded-full overflow-hidden gap-4'> */}
-        <Image
-          className='rounded-3xl shadow-3xl mix-blend-luminosity'
-          src='/bandphoto2.png'
-          alt='band'
-          width={700}
-          height={600}
-        />
-        {/* <Image
-          className='rounded-3xl shadow-3xl'
-          src='/bandphoto2.png'
-          alt='band'
-          width={300}
-          height={300}
-        />
-        <Image
-          className='rounded-3xl shadow-3xl'
-          src='/bandphoto3.png'
-          alt='band'
-          width={300}
-          height={250}
-        />
-        <Image
-          className='rounded-3xl shadow-3xl'
-          src='/bandphoto4.png'
-          alt='band'
-          width={300}
-          height={250}
-        /> */}
-        {/* </div> */}
-      </div>
-    </div>
-  );
+	return (
+		<div className="h-auto w-full">
+			{/* LANDING */}
+			<div className="min-h-screen w-full flex justify-center items-center">
+				<Image
+					className="animate-fadeIn mb-10 opacity-80"
+					src="/logoBG.png"
+					alt="logo"
+					width={1000}
+					height={800}
+				/>
+			</div>
+
+			{/* BAND IMAGE CAROUSEL */}
+			<div className="min-h-screen w-full flex justify-center items-center">
+				{/* <Image
+					className="rounded-3xl shadow-3xl mix-blend-luminosity"
+					src="/bandphoto2.png"
+					alt="band"
+					width={700}
+					height={600}
+				/> */}
+				<ImageCarousel />
+			</div>
+
+			{/* UPCOMING SHOWS */}
+			<div className="flex min-h-screen w-full items-center justify-center">
+				{/* <div className="flex w-full h-full justify-center items-center gap-12 mb-12">
+					<div className="w-[30%] h-[30vh] bg-black rounded-2xl opacity-50 text-white">
+						UPCOMING
+					</div>
+					<div className="w-[30%] h-[30vh] bg-black rounded-2xl opacity-50 text-white">
+						UPCOMING
+					</div>
+				</div>
+				<div className="flex w-full h-full justify-center items-center gap-12">
+					<div className="w-[30%] h-[30vh] bg-black rounded-2xl opacity-50 text-white">
+						UPCOMING
+					</div>
+					<div className="w-[30%] h-[30vh] bg-black rounded-2xl opacity-50 text-white">
+						UPCOMING
+					</div>
+				</div> */}
+				<Image
+					className="mt-6 mix-blend-darken shadow-3xl rounded-xl"
+					src="/bandshow1.png"
+					alt="band"
+					width={500}
+					height={500}
+				/>
+			</div>
+
+			<Contact />
+		</div>
+	)
 }
