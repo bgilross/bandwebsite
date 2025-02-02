@@ -4,6 +4,7 @@ import Image from "next/image"
 import ImageCarousel from "../components/ImageCarousel"
 import { Sancreek } from "next/font/google"
 import Contact from "../components/Contact"
+import ImgCarousel from "@/components/ImgCarousel"
 
 const sancreek = Sancreek({
 	subsets: ["latin"],
@@ -34,6 +35,9 @@ export default function Home() {
 					height={600}
 				/> */}
 				<ImageCarousel />
+			</div>
+			<div>
+				<ImgCarousel />
 			</div>
 
 			{/* UPCOMING SHOWS */}
