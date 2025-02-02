@@ -41,6 +41,7 @@ export default function FixedCarousel() {
                   : "animate-fadeOut opacity-0"
               }`}
               style={{
+                hidden: isRight,
                 left: isActive ? "50%" : isLeft ? "15%" : isRight ? "85%" : "0",
                 transform: "translateX(-50%)",
                 width: isActive ? "500px" : "150px", // Consistent width
@@ -49,7 +50,7 @@ export default function FixedCarousel() {
             >
               <Image
                 src={src}
-                alt={`Slide ${index + 1}`}
+                alt={`Image ${index + 1}`}
                 layout='intrinsic'
                 width={500}
                 height={300}
